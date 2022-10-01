@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c52772fb6d79d0b48a38539c2014fd91, type: 3}
+  m_Name: SmallGlowEpic
+  m_EditorClassIdentifier: 
+  effectPrefab: {fileID: 695771434373117238, guid: 295316d988b616a4aab7a04650636695,
+    type: 3}
+  effectType: 22

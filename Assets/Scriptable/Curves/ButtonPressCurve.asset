@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9301dbef1459e048abd09d2407945f6, type: 3}
+  m_Name: ButtonPressCurve
+  m_EditorClassIdentifier: 
+  curveType: 2
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0020637512
+      value: 0
+      inSlope: 7.3486967
+      outSlope: 7.3486967
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.40106073
+    - serializedVersion: 3
+      time: 0.07795432
+      value: 0.5151775
+      inSlope: 7.748044
+      outSlope: 6.561595
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.30928448
+      outWeight: 0.15568244
+    - serializedVersion: 3
+      time: 0.32445842
+      value: 0.59524834
+      inSlope: -8.110112
+      outSlope: -8.110112
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5025687
+      value: -0.20838499
+      inSlope: 0.048697118
+      outSlope: -0.059809085
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.6157916
+      outWeight: 0.45087424
+    - serializedVersion: 3
+      time: 0.83034325
+      value: 0.12488493
+      inSlope: -1.3596282
+      outSlope: -1.8153363
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.48601523
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.0000058710575
+      inSlope: -0.06220238
+      outSlope: -0.06220238
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.42298666
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efcf65d0338de74d8378c0532fcc09c, type: 3}
+  m_Name: Creature 74
+  m_EditorClassIdentifier: 
+  creatureType: 74
+  evolutionType: 75
+  damageType: 5
+  bodyType: 5
+  dropRarity: 0
+  creatureSprite: {fileID: -4072610725208559664, guid: 8bc30236c99483149a89a30ba891b671,
+    type: 3}
+  levelToEvolve: 80
+  evolution: 2
+  damage: 60
+  speed: 75
+  defense: 65
+  magic: 100
+  frameOffset: {x: 0, y: 5}

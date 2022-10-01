@@ -1,0 +1,430 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6469916127594687081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6469916127594687084}
+  - component: {fileID: 6469916127594687086}
+  - component: {fileID: 6469916127594687087}
+  - component: {fileID: 6469916127594687090}
+  - component: {fileID: 6469916127594687085}
+  - component: {fileID: 6469916127594687091}
+  - component: {fileID: 6469916127594687088}
+  - component: {fileID: 6469916127594687089}
+  - component: {fileID: 6469916127594687094}
+  - component: {fileID: 6469916127594687095}
+  - component: {fileID: 6469916127594687092}
+  - component: {fileID: 6469916127594687093}
+  m_Layer: 0
+  m_Name: Controllers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6469916127594687084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469916127594687081}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6469916127594687086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469916127594687081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72cc916b54effd6428e627907aee8196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petTabController: {fileID: 6469916127594687087}
+  rosterController: {fileID: 6469916127594687092}
+  eggController: {fileID: 6469916127594687095}
+  leaderboardController: {fileID: 6469916127594687090}
+  marketController: {fileID: 6469916127594687085}
+  postScreenController: {fileID: 6469916127594687088}
+  sungenController: {fileID: 6469916127594687093}
+  loginController: {fileID: 6469916127594687089}
+  nearHelper: {fileID: 6469916127594687094}
+  leftButtonsObj: {fileID: 0}
+  leftButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  windowObjs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  playerName: {fileID: 0}
+  pixelTokenText: {fileID: 0}
+  cardWindowTransform: {fileID: 0}
+  deleteCheckObj: {fileID: 0}
+  cardScreenObj: {fileID: 0}
+  trainButton: {fileID: 0}
+  trainDescription: {fileID: 0}
+  evolveButton: {fileID: 0}
+  deleteButton: {fileID: 0}
+  leftCardButtons: {fileID: 0}
+  rightCardButtons: {fileID: 0}
+  newTextObj: {fileID: 0}
+  newText: {fileID: 0}
+  trainTitleText: {fileID: 0}
+  trainTimerText: {fileID: 0}
+  fightController: {fileID: 6469916127594687091}
+  fightCanvas: {fileID: 0}
+  mainCanvas: {fileID: 0}
+  mainMenuCanvas: {fileID: 0}
+  matchSearchText: {fileID: 0}
+  matchButton: {fileID: 0}
+  matchSearchWindow: {fileID: 0}
+  loadingScreen: {fileID: 0}
+  cardPrefab: {fileID: 3898913930924382228, guid: d2ae43d7330814645b90d6fea02b403c,
+    type: 3}
+  warningPrefab: {fileID: 4376790428504643638, guid: f0a1f3ecb793a154292146c6861349d0,
+    type: 3}
+  sellWindow: {fileID: 0}
+  sellButton: {fileID: 0}
+  stopButton: {fileID: 0}
+  inputParent: {fileID: 0}
+  titleText: {fileID: 0}
+  marketTime: {fileID: 0}
+  priceInput: {fileID: 0}
+  sungenTab: {fileID: 0}
+  cardController: {fileID: 0}
+  warningController: {fileID: 0}
+  showingCard: 0
+  showingWarn: 0
+--- !u!114 &6469916127594687087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469916127594687081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90baf36cf5f24374eadabc5d332a84c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scroller: {fileID: 0}
+  scrollRect: {fileID: 0}
+  cellViewPrefab: {fileID: 7712981009216496018, guid: df06fab3564804047ae296c4ad91001c,
+    type: 3}
+  mainMenuController: {fileID: 6469916127594687086}
+  rosterController: {fileID: 6469916127594687092}
+  maxCreatureText: {fileID: 0}
+  showingPreview: 0
+  creaturePreviewRect: {fileID: 0}
+  creaturePreview: {fileID: 0}
+  creaturePreviewEdge: {fileID: 0}
+  creaturesToAnimate: 
+--- !u!114 &6469916127594687090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469916127594687081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c61f742bfb63e5449973f43202b3a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scroller: {fileID: 0}
+  cellViewPrefab: {fileID: 2990581818793811422, guid: 423e2b1810bb5dc46980fad7b327228b,
+    type: 3}
+  countdownObj: {fileID: 0}
+  countdownText: {fileID: 0}
+  globalButtonImage: {fileID: 0}
+  clashButtonImage: {fileID: 0}
+--- !u!114 &6469916127594687085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469916127594687081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9523de3b929d642a5fb6f3fc40c619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scroller: {fileID: 0}
+  cellViewPrefab: {fileID: 5036303403140574273, guid: 02e898d1e5c853c43b72c957506487ff,
+    type: 3}
+  numberOfCellsPerRow: 3
+  emptyBorderSprite: {fileID: 21300000, guid: 8209cf2c36da20649af24b067678b3db, type: 3}
+  emptyTypeSprite: {fileID: 167466777429655392, guid: 73a59e8317858b941ae9e7c7dba5ce88,
+    type: 3}
+  customInput: {fileID: 0}
+  authWindow: {fileID: 0}
+  dropdownWindow: {fileID: 0}
+  dockButton: {fileID: 0}
+  dropButton: {fileID: 0}
+  mainMenuController: {fileID: 6469916127594687086}
+  nearHelper: {fileID: 6469916127594687094}
+  sortButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  highLowButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &6469916127594687091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469916127594687081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd2ff89da7dbf54ca0986371cc2cd13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerBorders:
+  - {fileID: 0}
+  - {fileID: 0}
+  playerRanks:
+  - {fileID: 0}
+  - {fileID: 0}
+  playerNames:
+  - {fileID: 0}
+  - {fileID: 0}
+  playerParents:
+  - {fileID: 0}
+  - {fileID: 0}
+  mainMenuController: {fileID: 6469916127594687086}
+  textPrefab: {fileID: 7175144485030998622, guid: 68f6f7036cb63dd4486c65f1845cb36a,
+    type: 3}
+  cardPrefab: {fileID: 3226271893818052508, guid: 417ce1f017631dd478d14bcacf94d32b,
+    type: 3}
+  damageColor: {r: 0.94117653, g: 0.41176474, b: 0.13725491, a: 1}
+  magicColor: {r: 0.90196085, g: 0.3529412, b: 0.90196085, a: 1}
+  defenseColor: {r: 0.25490198, g: 0.8431373, b: 0.8431373, a: 1}
+  speedColor: {r: 0.74509805, g: 0.8431373, b: 0.1764706, a: 1}
+  onHitColor: {r: 0.6666667, g: 0.078431375, b: 0.23529413, a: 1}
+--- !u!114 &6469916127594687088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469916127594687081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f22997aee920ef45ab354aaebbff01b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuController: {fileID: 6469916127594687086}
+  postCanvas: {fileID: 0}
+  victoryObj: {fileID: 0}
+  defeatObj: {fileID: 0}
+  backgroundImage: {fileID: 0}
+  rankUpImage: {fileID: 0}
+  rankUpBorder: {fileID: 0}
+  rankUpText: {fileID: 0}
+  rankFullText: {fileID: 0}
+  rankBar: {fileID: 0}
+  winMaterial: {fileID: 2100000, guid: 127b86ad65e8f1c4b917bd8bda3e54aa, type: 2}
+  defeatMaterial: {fileID: 2100000, guid: 9bd02cf27e7332b40a9a76d8632c144a, type: 2}
+--- !u!114 &6469916127594687089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469916127594687081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e0da25ab64ec74296970ecac84d27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuController: {fileID: 6469916127594687086}
+  customInput: {fileID: 0}
+  nearText: {fileID: 0}
+  modalTitleText: {fileID: 0}
+  loadingObj: {fileID: 0}
+  loginButtonObj: {fileID: 0}
+  authButtonObj: {fileID: 0}
+  modalWindowObj: {fileID: 0}
+  nearhelper: {fileID: 6469916127594687094}
+  simulateError: 0
+--- !u!114 &6469916127594687094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469916127594687081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d2b5985376bb44782dfc21aab099b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Testnet: 1
+  loginController: {fileID: 6469916127594687089}
+  mainMenuController: {fileID: 6469916127594687086}
+  marketController: {fileID: 6469916127594687085}
+  eggController: {fileID: 6469916127594687095}
+  onMarketPurchasing: 0
+--- !u!114 &6469916127594687095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469916127594687081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ca8360ecb4a5f46926ea832eef39d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuController: {fileID: 6469916127594687086}
+  nearHelper: {fileID: 6469916127594687094}
+  eggPrices: 14000000c800000078050000ffffffff
+  eggTimers: 040000000c0000001800000030000000
+  eggsImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  eggHatchButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  eggsCount:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  descriptionTexts:
+  - {fileID: 0}
+  - {fileID: 0}
+  backgroundColors:
+  - {r: 0.21176472, g: 0.2509804, b: 0.34901962, a: 1}
+  - {r: 0.054901965, g: 0.21960786, b: 0.6039216, a: 1}
+  - {r: 0.38431376, g: 0.17254902, b: 0.7058824, a: 1}
+  - {r: 0.4901961, g: 0, b: 0.2627451, a: 1}
+  - {r: 0.21568629, g: 0.25490198, b: 0.3529412, a: 1}
+  eggSprites:
+  - {fileID: -231554102900035961, guid: 73a59e8317858b941ae9e7c7dba5ce88, type: 3}
+  - {fileID: -6659749153889747926, guid: 73a59e8317858b941ae9e7c7dba5ce88, type: 3}
+  - {fileID: -7549803640975849711, guid: 73a59e8317858b941ae9e7c7dba5ce88, type: 3}
+  - {fileID: -2045779248775157482, guid: 73a59e8317858b941ae9e7c7dba5ce88, type: 3}
+  eggPivot: {fileID: 0}
+  eggObj: {fileID: 0}
+  eggImage: {fileID: 0}
+  eggBackground: {fileID: 0}
+  eggEdge: {fileID: 0}
+  legendaryButton: {fileID: 0}
+  legendaryAvailable: 0
+  openButtonObj: {fileID: 0}
+  descriptionObj: {fileID: 0}
+  eggScreenObj: {fileID: 0}
+  eggScreenPivot: {fileID: 0}
+  eggScreenImage: {fileID: 0}
+--- !u!114 &6469916127594687092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469916127594687081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0418cd141bb3d7c489f440911fa68424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuController: {fileID: 6469916127594687086}
+  tabCells:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  removeButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tabCreatureImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tabCreatureEdges:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tabCreatureBodyTypes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tabCreatureAttackTypes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tabCreatureNames:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tabCreatureLevels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tabCreatureTrainLevels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tabCreatureDamage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tabCreatureSpeed:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tabCreatureMagic:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tabCreatureDefense:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rankText: {fileID: 0}
+  rankBorder: {fileID: 0}
+  emptyColor: {r: 0.098039225, g: 0.11764707, b: 0.23529413, a: 1}
+--- !u!114 &6469916127594687093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469916127594687081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f814ee8c195d4499f5520cf47122bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 0}
+  timerBar: {fileID: 0}
+  sungeonWindow: {fileID: 0}
