@@ -145,10 +145,12 @@ public class Database : MonoBehaviour
                 databaseStruct.creatureIndexes.Add(i);
             }
         }*/
+        //Debug.Log(PlayerPrefs.GetString(databaseName));
     }
     public static void SaveDatabase()
     {
         PlayerPrefs.SetString(databaseName, XMLGenerator.SerializeObject(databaseStruct, typeof(DatabaseStruct)));
+        PlayerPrefs.Save();
     }
     public static void AddNewCreature(CreatureStruct creatureStruct)
     {

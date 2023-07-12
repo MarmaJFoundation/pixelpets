@@ -45,6 +45,7 @@ public class LoginController : MonoBehaviour
     //#protocol
     public void OnLoginClick()
     {
+        /*
         if (customInput.typeString == "")
         {
             mainMenuController.ShowWarning("Error!", "Address cannot be empty.", "Enter your Near Wallet adress.");
@@ -57,11 +58,16 @@ public class LoginController : MonoBehaviour
         }
         playerAccountName = customInput.typeString.ToLower();
         customInput.enabled = false;
-        nearhelper.Login(playerAccountName);
+        */
+
+        //nearhelper.Login(playerAccountName);
+        
+        nearhelper.WalletSelectorLogin();
+        
         //if (!skipPopup)
         //{
         //mainMenuController.ShowLoading();
-        StartCoroutine(WaitAndShowAuthButton());
+        //StartCoroutine(WaitAndShowAuthButton());
         //Application.OpenURL("https://pixelpets.pixeldapps.co/");
         //}
     }

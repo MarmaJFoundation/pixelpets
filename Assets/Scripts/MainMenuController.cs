@@ -232,9 +232,15 @@ public class MainMenuController : MonoBehaviour
     }
     public void OnLogoutClick()
     {
-        SetWindow(0);
         nearHelper.Logout(true);
         Database.SaveDatabase();
+
+        ShowLoading();
+
+        nearHelper.DelayedLogout();
+
+        /*
+        SetWindow(0);
         loginController.ResetLogin();
         leftButtonsObj.SetActive(false);
         mainMenuCanvas.enabled = false;
@@ -243,6 +249,7 @@ public class MainMenuController : MonoBehaviour
         {
             sungenTab.SetActive(false);
         }
+        */
     }
     public void OnWikipediaClick()
     {

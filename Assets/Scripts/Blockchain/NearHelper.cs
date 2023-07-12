@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,7 +20,8 @@ public class NearHelper : MonoBehaviour
     string WalletUri = "https://wallet.testnet.near.org";
     string ContractId = "pixeltoken.testnet";
     string WalletSuffix = ".testnet";
-    string BackendUri = "https://dev-testnet.pixeldapps.co/api";
+    //string BackendUri = "https://dev-testnet.pixeldapps.co/api";
+    private string BackendUri = "https://pd-testnet.marmaj.org/api";
     public bool Testnet = true;
     public LoginController loginController;
     public MainMenuController mainMenuController;
@@ -32,18 +34,45 @@ public class NearHelper : MonoBehaviour
     [HideInInspector]
     public DataGetState dataGetState;
     private int eggToHatch;
+
+    [DllImport("__Internal")]
+    private static extern void WSInit(string callbackClass, string callbackMethod);
+    [DllImport("__Internal")]
+    private static extern void WSLogin(string contractId);
+    [DllImport("__Internal")]
+    public static extern void WSLogout();
+    public void DelayedLogout()
+    {
+        Invoke("WSLogout", 2);
+    }
+    [DllImport("__Internal")]
+    private static extern void AddKey(string publicKey, string contractId);
+
+    [SerializeField] private GameObject validationFailedWindow;
+
     private void Start()
     {
-        if (BaseUtils.offlineMode)
-        {
-            return;
-        }
         if (!Testnet)
         {
-            BackendUri = "https://ecosystem.pixeldapps.co/api";
+            BackendUri = "https://pd.marmaj.org/api";
             WalletUri = "https://wallet.near.org";
             ContractId = "pixeltoken.near";
             WalletSuffix = ".near";
+        }
+#if UNITY_EDITOR
+        Setup();
+#else
+        WSInit(this.gameObject.name, "WSInitFinished");
+#endif
+    }
+
+    public void Setup()
+    {
+        validationFailedWindow.SetActive(false);
+
+        if (BaseUtils.offlineMode)
+        {
+            return;
         }
         //Debug.Log(Database.databaseStruct.privateKey + "," + Database.databaseStruct.playerAccount + "," + Database.databaseStruct.publicKey);
         if (Database.databaseStruct.playerAccount != null && Database.databaseStruct.privateKey != null && Database.databaseStruct.publicKey != null)
@@ -57,6 +86,34 @@ public class NearHelper : MonoBehaviour
             loginController.Setup();
         }
     }
+
+    public void WSInitFinished(string accountId)
+    {
+        if (!string.IsNullOrEmpty(accountId)
+            && (string.IsNullOrEmpty(Database.databaseStruct.playerAccount) || Database.databaseStruct.playerAccount != accountId))
+        {
+            if (accountId.Contains(WalletSuffix))
+            {
+                Database.databaseStruct.playerAccount = accountId;
+            }
+            else
+            {
+                Database.databaseStruct.playerAccount = accountId + WalletSuffix;
+            }
+
+            StartCoroutine(WebHelper.SendGet<ProxyAccessKeyResponse>(BackendUri + "/proxy/get-ed25519pair", LoginCallback));
+        }
+        else
+        {
+            if (string.IsNullOrEmpty(accountId))
+            {
+                Database.databaseStruct.playerAccount = null;
+            }
+
+            Setup();
+        }
+    }
+
     public void CheckForValidLogin()
     {
         StartCoroutine(CheckLoginValid(Database.databaseStruct.playerAccount, Database.databaseStruct.publicKey));
@@ -85,13 +142,34 @@ public class NearHelper : MonoBehaviour
         StartCoroutine(WebHelper.SendGet<ProxyAccessKeyResponse>(BackendUri + "/proxy/get-ed25519pair", LoginCallback));
     }
 
+    public void WalletSelectorLogin()
+    {
+        WSLogin(this.ContractId);
+    }
+
+    public void AddKeyFinished()
+    {
+        Setup();
+    }
+
+    private IEnumerator AddKeyCoroutine()
+    {
+        mainMenuController.ShowLoading();
+
+        yield return new WaitForSeconds(1f);
+
+        AddKey(Database.databaseStruct.publicKey, ContractId);
+    }
+
     private void LoginCallback(ProxyAccessKeyResponse res)
     {
         //Debug.Log("Login Callback");
         Database.databaseStruct.privateKey = res.privateKey;
         Database.databaseStruct.publicKey = res.publicKey;
         Database.SaveDatabase();
-        Application.OpenURL(WalletUri + "/login/?referrer=PixelPets%20Client&public_key=" + res.publicKey + "&contract_id=" + ContractId);
+
+        StartCoroutine(AddKeyCoroutine());
+        //Application.OpenURL(WalletUri + "/login/?referrer=PixelPets%20Client&public_key=" + res.publicKey + "&contract_id=" + ContractId);
     }
 
     //this happens on invalid login
@@ -134,8 +212,12 @@ public class NearHelper : MonoBehaviour
         }
         if (!res.data.valid)
         {
+            /*
             Logout();
             Database.databaseStruct.validCredentials = false;
+            */
+
+            validationFailedWindow.SetActive(true);
         }
         else
         {
