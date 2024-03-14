@@ -16,7 +16,7 @@ public enum DataGetState
 
 public class NearHelper : MonoBehaviour
 {
-    string WalletUri = "https://wallet.testnet.near.org";
+    string WalletUri = "https://testnet.mynearwallet.com";
     string ContractId = "pixeltoken.testnet";
     string WalletSuffix = ".testnet";
     string BackendUri = "https://dev-testnet.pixeldapps.co/api";
@@ -41,7 +41,7 @@ public class NearHelper : MonoBehaviour
         if (!Testnet)
         {
             BackendUri = "https://ecosystem.pixeldapps.co/api";
-            WalletUri = "https://wallet.near.org";
+            WalletUri = "https://www.mynearwallet.com";
             ContractId = "pixeltoken.near";
             WalletSuffix = ".near";
         }
