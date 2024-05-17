@@ -109,8 +109,8 @@ public class MainMenuController : MonoBehaviour
             selectedCreatures[i] = -1;
         }
         leftButtonsObj.SetActive(true);
-        mainMenuCanvas.enabled = true;
-        mainMenuCanvas.gameObject.SetActive(true);
+        mainMenuCanvas.enabled = false;
+        mainMenuCanvas.gameObject.SetActive(false);
         UpdateSelectedCreatures();
         SetWindow(0);
         if (Database.databaseStruct.hasSungen)
