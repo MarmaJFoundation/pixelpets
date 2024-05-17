@@ -139,7 +139,7 @@ public class PetTabCell : EnhancedScrollerCellView, IPointerEnterHandler, IPoint
     }
     public void OnCreatureClick()
     {
-        /*if (PetTabController.movingCreature != -1)
+        *if (PetTabController.movingCreature != -1)
         {
             petTabController.SwitchCreatures(this, petTabController.scroller.GetCellViewAtDataIndex(PetTabController.movingCreature) as PetTabCell);
             return;

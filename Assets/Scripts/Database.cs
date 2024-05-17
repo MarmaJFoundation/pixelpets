@@ -85,7 +85,7 @@ public class Database : MonoBehaviour
 {
     public static DatabaseStruct databaseStruct;
     private static string databaseName;
-    private static readonly string currentVersion = "1.6";
+    private static readonly string currentVersion = "1.7";
     public CustomText versionText;
 
     private void Awake()
