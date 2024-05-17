@@ -26,8 +26,9 @@ public class MainMenuController : MonoBehaviour
     public MergeController mergeController;
     public NearHelper nearHelper;
     //Ui
-    public GameObject mainMenu;
-    private bool isShowing;
+    public CanvasGroup myCanvasGroup;
+
+
     //left window
     public GameObject leftButtonsObj;
     public Image[] leftButtons;
@@ -102,6 +103,11 @@ public class MainMenuController : MonoBehaviour
     private long priceOffered;
     private int trainPrice;
     private int previousFightPoints;
+
+    void Start()
+    {
+       mainMenuCanvas = GetComponent<Canvas>();
+    }
     public void Setup()
     {
         for (int i = 0; i < 3; i++)
