@@ -723,7 +723,9 @@ public class MainMenuController : MonoBehaviour
     }
     public void OnRosterCreatureClick(int index)
     {
-        GetComponent(RosterTab).enabled = false;
+        CanvasGroup roster = MyRectTransform.GetComponent<RosterController>();
+roster.interactable= false;
+roster.alpha = 0;
         if (selectedCreatures[index] == -1)
         {
             ShowWarning("Empty slot!", "Select a creature from the right tab", "before checking your roster.");
