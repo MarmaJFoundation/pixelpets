@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 //using UnityEngine.EventSystems;
@@ -25,7 +26,8 @@ public class MainMenuController : MonoBehaviour
     public MergeController mergeController;
     public NearHelper nearHelper;
     //Ui
-    public GameObject mainCanvasUI;
+    public GameObject mainMenu;
+    private bool isShowing;
     //left window
     public GameObject leftButtonsObj;
     public Image[] leftButtons;
@@ -732,7 +734,13 @@ public class MainMenuController : MonoBehaviour
             return;
         }
         ShowCard(selectedCreatures[index]);
-        mainCanvas.enabled = false;
+
+        if (isShowing = !isShowing)
+        {
+            mainMenuCanvas.enabled = false;
+        }
+        
+
     }
     public void ShowCard(int databaseIndex)
     {
