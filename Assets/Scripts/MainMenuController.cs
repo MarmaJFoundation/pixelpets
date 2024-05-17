@@ -137,10 +137,7 @@ public class MainMenuController : MonoBehaviour
             }
         }
     }
-    public void DiscordClick()
-    {
-        Application.OpenURL("https://discord.gg/xFAAa8Db6f");
-    }
+   
     public void SwitchBackground()
     {
         Database.databaseStruct.stoppedBackground = !Database.databaseStruct.stoppedBackground;
