@@ -149,7 +149,7 @@ public class PetTabCell : EnhancedScrollerCellView, IPointerEnterHandler, IPoint
         }*/
         if (mergeCell)
         {
-            rosterController.enabled = false;
+            
             mergeController.OnTabClick(this);
             return;
         }
@@ -176,6 +176,6 @@ public class PetTabCell : EnhancedScrollerCellView, IPointerEnterHandler, IPoint
             //shuffleButton.SetActive(false);
             enqueueButton.SetActive(false);
         }
-        rosterController.enabled = true;
+        
     }
 }
