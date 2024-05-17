@@ -21,6 +21,7 @@ public class RosterCellController : MonoBehaviour
     public CustomText speedText;
     public CustomText nameText;
 
+    public Canvas mainCanvas;
     public int overallStats;
 
     public void Setup(int databaseIndex)

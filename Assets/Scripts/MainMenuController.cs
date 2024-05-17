@@ -735,12 +735,8 @@ public class MainMenuController : MonoBehaviour
         }
         ShowCard(selectedCreatures[index]);
 
-        if (isShowing = !isShowing)
-        {
-            mainMenuCanvas.enabled = false;
-        }
-        
-
+        mainMenuCanvas.enabled = false;
+        mainMenuCanvas.gameObject.SetActive(false);
     }
     public void ShowCard(int databaseIndex)
     {
