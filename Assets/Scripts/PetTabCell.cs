@@ -33,13 +33,12 @@ public class PetTabCell : EnhancedScrollerCellView, IPointerEnterHandler, IPoint
     public int DataIndex { get; private set; }
     private PetTabController petTabController;
     private MergeController mergeController;
-
-    private RosterController rosterController;
+   
     public void SetData(PetTabController petTabController, int dataIndex, PetData petData)
     {
         this.petTabController = petTabController;
         this.petData = petData;
-        this.rosterController = rosterController;
+       
         DataIndex = dataIndex;
         databaseIndex = petData.databaseIndex;
         if (enqueueButton != null)

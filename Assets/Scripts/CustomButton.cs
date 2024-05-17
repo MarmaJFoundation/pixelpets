@@ -20,6 +20,7 @@ public class CustomButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
     {
         StartCoroutine(BounceTransform(eventData.button == PointerEventData.InputButton.Right));
         buttonImage.material = OutlineMaterial() ? BaseUtils.highLineUI : BaseUtils.highlightUI;
+        GetComponent<RosterCellController>().enabled = false;
     }
     public void OnPointerDown(PointerEventData eventData)
     {
