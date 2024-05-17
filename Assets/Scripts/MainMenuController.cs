@@ -25,7 +25,7 @@ public class MainMenuController : MonoBehaviour
     public MergeController mergeController;
     public NearHelper nearHelper;
     //Ui
-    public GameObject mainCanvas;
+    public GameObject mainCanvasUI;
     //left window
     public GameObject leftButtonsObj;
     public Image[] leftButtons;
@@ -732,7 +732,7 @@ public class MainMenuController : MonoBehaviour
             return;
         }
         ShowCard(selectedCreatures[index]);
-       mainCanvas.SetActive(false);
+        mainCanvas.enabled = false;
     }
     public void ShowCard(int databaseIndex)
     {
