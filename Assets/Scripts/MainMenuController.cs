@@ -243,7 +243,7 @@ public class MainMenuController : MonoBehaviour
     }
     public void OnWikipediaClick()
     {
-        Application.OpenURL("https://github.com/pixeldapps/pixelpets-wiki/wiki");
+        //Application.OpenURL("https://github.com/pixeldapps/pixelpets-wiki/wiki");
     }
     public void OnSellCreatureClick()
     {
@@ -723,6 +723,7 @@ public class MainMenuController : MonoBehaviour
     }
     public void OnRosterCreatureClick(int index)
     {
+        GetComponent(RosterTab).enabled = false;
         if (selectedCreatures[index] == -1)
         {
             ShowWarning("Empty slot!", "Select a creature from the right tab", "before checking your roster.");

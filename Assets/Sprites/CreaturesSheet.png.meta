@@ -243,7 +243,7 @@ TextureImporter:
       213: 3554933322419967297
     second: CreaturesSheet_79
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -260,10 +260,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -302,6 +304,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -313,6 +317,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -325,6 +330,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -337,6 +343,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -349,6 +356,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2044,9 +2078,89 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      CreaturesSheet_0: -637053634697978985
+      CreaturesSheet_1: 7526668286335077463
+      CreaturesSheet_10: 7501522566194856898
+      CreaturesSheet_11: 5617952893023100377
+      CreaturesSheet_12: 2653845041520592641
+      CreaturesSheet_13: 8755195589938836997
+      CreaturesSheet_14: -4804229965605720548
+      CreaturesSheet_15: -4219748919389489910
+      CreaturesSheet_16: 5026292164508691103
+      CreaturesSheet_17: 1758902519012597225
+      CreaturesSheet_18: -1065545246631741648
+      CreaturesSheet_19: 8323022517084061171
+      CreaturesSheet_2: -3800290087581232982
+      CreaturesSheet_20: -894500036861767145
+      CreaturesSheet_21: -2367755555972726377
+      CreaturesSheet_22: -3778861097015045331
+      CreaturesSheet_23: -610946583918994158
+      CreaturesSheet_24: 6829142835198008335
+      CreaturesSheet_25: 1484586171891696462
+      CreaturesSheet_26: -8183037942169605806
+      CreaturesSheet_27: -7227413552017017960
+      CreaturesSheet_28: 8040027669723588476
+      CreaturesSheet_29: 6637734186127859810
+      CreaturesSheet_3: 7499071095578613638
+      CreaturesSheet_30: -2630231462976475217
+      CreaturesSheet_31: 7770538670509661814
+      CreaturesSheet_32: -6374970425097260964
+      CreaturesSheet_33: -857359150101475130
+      CreaturesSheet_34: 8951547196721582003
+      CreaturesSheet_35: 6165413519695278499
+      CreaturesSheet_36: 5376657580907330304
+      CreaturesSheet_37: 593367101645018686
+      CreaturesSheet_38: 6151188214778386807
+      CreaturesSheet_39: -5112793099205667067
+      CreaturesSheet_4: -7128463125062847549
+      CreaturesSheet_40: 3281869839337349789
+      CreaturesSheet_41: 4562624019314700136
+      CreaturesSheet_42: 2426984162787065021
+      CreaturesSheet_43: -1850972415899866318
+      CreaturesSheet_44: -2399687990746688901
+      CreaturesSheet_45: -4406856874394265900
+      CreaturesSheet_46: 6297989299652750051
+      CreaturesSheet_47: -7338019416598814233
+      CreaturesSheet_48: 1053095440967805772
+      CreaturesSheet_49: 224981443978309226
+      CreaturesSheet_5: -2218296993519126952
+      CreaturesSheet_50: -6650030293891103864
+      CreaturesSheet_51: 1658223691223663363
+      CreaturesSheet_52: -6763731109567081775
+      CreaturesSheet_53: -5114414103316565253
+      CreaturesSheet_54: 1877135069547435535
+      CreaturesSheet_55: -6666534676842606898
+      CreaturesSheet_56: 7934325949581445216
+      CreaturesSheet_57: 2266085746647407942
+      CreaturesSheet_58: 8648285912993570255
+      CreaturesSheet_59: 4986950644507358534
+      CreaturesSheet_6: -2510432090116739860
+      CreaturesSheet_60: 7697251186628352530
+      CreaturesSheet_61: -7809309046913601460
+      CreaturesSheet_62: 8170782352753833807
+      CreaturesSheet_63: -3248309139651902407
+      CreaturesSheet_64: 5060175589594627064
+      CreaturesSheet_65: 4186176359294363649
+      CreaturesSheet_66: 528017426032351767
+      CreaturesSheet_67: 35907125917717245
+      CreaturesSheet_68: -889399724606783231
+      CreaturesSheet_69: -4072610725208559664
+      CreaturesSheet_7: -8251591677042450458
+      CreaturesSheet_70: -2185110775399984692
+      CreaturesSheet_71: -7608113333467520389
+      CreaturesSheet_72: -5855052820720541385
+      CreaturesSheet_73: 8563663199400444133
+      CreaturesSheet_74: 4472182405920309454
+      CreaturesSheet_75: -8893470153755487825
+      CreaturesSheet_76: 6312188854182810781
+      CreaturesSheet_77: 5197353952394018062
+      CreaturesSheet_78: -2325525986167648668
+      CreaturesSheet_79: 3554933322419967297
+      CreaturesSheet_8: -6139549954172360654
+      CreaturesSheet_9: -4389904025338639501
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
