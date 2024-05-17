@@ -150,11 +150,12 @@ public class PetTabCell : EnhancedScrollerCellView, IPointerEnterHandler, IPoint
         }*/
         if (mergeCell)
         {
+            rosterController.enabled = false;
             mergeController.OnTabClick(this);
             return;
         }
         petTabController.OnCreatureClick(petData.databaseIndex);
-        rosterController.enabled = false;
+        
         
     }
     public void OnMoveClick()
