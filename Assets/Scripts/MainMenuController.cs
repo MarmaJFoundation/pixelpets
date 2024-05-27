@@ -253,7 +253,7 @@ public class MainMenuController : MonoBehaviour
     }
     public void OnWikipediaClick()
     {
-        //Application.OpenURL("https://github.com/pixeldapps/pixelpets-wiki/wiki");
+        Application.OpenURL("https://github.com/MarmaJFoundation/pixelpets/wiki");
     }
     public void OnSellCreatureClick()
     {
